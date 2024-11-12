@@ -1,5 +1,7 @@
 package com.example.globalduniya_mobile;
 
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,15 +16,17 @@ import java.util.List;
 public class TourCarouselAdapter extends RecyclerView.Adapter<TourCarouselAdapter.TourViewHolder> {
 
     private List<Tour> tourList;
+    private Context context;
 
-    public TourCarouselAdapter(List<Tour> tourList) {
+    public TourCarouselAdapter(List<Tour> tourList, Context context) {
         this.tourList = tourList;
+        this.context = context;
     }
 
     @NonNull
     @Override
     public TourViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.tour_carousel_item, parent, false);
+        View view = LayoutInflater.from(context).inflate(R.layout.tour_carousel_item, parent, false);
         return new TourViewHolder(view);
     }
 
@@ -33,6 +37,17 @@ public class TourCarouselAdapter extends RecyclerView.Adapter<TourCarouselAdapte
         holder.tourDescription.setText(tour.getDescription());
         holder.tourPrice.setText("$" + tour.getPrice());
         holder.tourImage.setImageResource(tour.getImageResId());
+
+        // Set click listener to navigate to the details page
+        holder.itemView.setOnClickListener(v -> {
+            Intent intent = new Intent(context, TourDetailsActivity.class);
+            intent.putExtra("tourName", tour.getName());
+            intent.putExtra("tourDescription", tour.getDescription());
+            intent.putExtra("tourPrice", tour.getPrice());
+            intent.putExtra("tourImageResId", tour.getImageResId());
+            intent.putExtra("tourLongDescription", tour.getLongDescription());
+            context.startActivity(intent);
+        });
     }
 
     @Override

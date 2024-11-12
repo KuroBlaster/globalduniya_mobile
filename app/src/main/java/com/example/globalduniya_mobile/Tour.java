@@ -4,13 +4,15 @@ public class Tour {
     private String name;
     private String description;
     private double price;
-    private int imageResId;  // Image resource ID for the tour
+    private int imageResId;
+    private String longDescription; // For detailed view
 
-    public Tour(String name, String description, double price, int imageResId) {
+    public Tour(String name, String description, double price, int imageResId, String longDescription) {
         this.name = name;
         this.description = description;
         this.price = price;
         this.imageResId = imageResId;
+        this.longDescription = longDescription;
     }
 
     public String getName() {
@@ -27,5 +29,9 @@ public class Tour {
 
     public int getImageResId() {
         return imageResId;
+    }
+
+    public String getLongDescription() {
+        return longDescription;
     }
 }
