@@ -12,8 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Globalduniya_mobile"
         tools:targetApi="31">
-        <!-- Declare the main activity -->
-        <activity android:name=".MainActivity"
+        <!-- Declare SplashActivity as the launcher activity -->
+        <activity android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,10 +21,9 @@
             </intent-filter>
         </activity>
 
-        <!-- Declare the TourDetailsActivity -->
-        <activity android:name=".TourDetailsActivity">
-            <!-- No intent-filter needed here -->
-        </activity>
+        <!-- Declare MainActivity and other activities -->
+        <activity android:name=".MainActivity" />
+        <activity android:name=".TourDetailsActivity" />
 
     </application>
 
