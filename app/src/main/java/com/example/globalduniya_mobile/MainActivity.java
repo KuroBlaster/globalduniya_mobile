@@ -1,14 +1,16 @@
 package com.example.globalduniya_mobile;
 
 import android.os.Bundle;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;
+import com.google.android.gms.maps.CameraUpdateFactory;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity{
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,8 +27,11 @@ public class MainActivity extends AppCompatActivity {
         tourList.add(new Tour("City Lights", "Enjoy the nightlife in the big city", 399.99, R.drawable.city_image, "An exciting city tour, perfect for night owls."));
         tourList.add(new Tour("Historical Sites", "Visit ancient ruins and museums", 199.99, R.drawable.history_image, "A cultural journey through ancient ruins and museums."));
 
-        // Set up the adapter
+        // Set up the adapter for ViewPager2
         TourCarouselAdapter adapter = new TourCarouselAdapter(tourList, this);
         tourCarousel.setAdapter(adapter);
+
+
     }
+
 }

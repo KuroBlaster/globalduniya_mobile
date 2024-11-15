@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Globalduniya_mobile</string>
+    <string name="google_maps_api_key">AIzaSyDFVEfZJLJEJ3GiwCWGHfkxUu09F3wAphg</string>
 </resources>
