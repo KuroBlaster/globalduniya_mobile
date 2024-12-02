@@ -25,12 +25,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="14sp"
+        android:maxLines="4"
+        android:ellipsize="end"
         android:layout_marginTop="4dp"/>
 
     <TextView
         android:id="@+id/tourPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="16sp"
+        android:textSize="28sp"
         android:layout_marginTop="4dp"/>
 </LinearLayout>

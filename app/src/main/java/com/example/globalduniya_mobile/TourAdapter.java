@@ -27,7 +27,7 @@ public class TourAdapter extends ArrayAdapter<Tour> {
         TextView descriptionTextView = convertView.findViewById(R.id.tourDescription);
         TextView priceTextView = convertView.findViewById(R.id.tourPrice);
 
-        nameTextView.setText(tour.getName());
+        nameTextView.setText(tour.getTitle());
         descriptionTextView.setText(tour.getDescription());
         priceTextView.setText("$" + tour.getPrice());
 

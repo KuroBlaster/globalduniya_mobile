@@ -1,48 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:padding="16dp">
 
-    <ImageView
-        android:id="@+id/tourDetailImage"
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:scaleType="centerCrop"
-        android:layout_marginBottom="16dp"/>
-
-    <TextView
-        android:id="@+id/tourDetailName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="24sp"
-        android:textStyle="bold"/>
-
-    <TextView
-        android:id="@+id/tourDetailDescription"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="16sp"
-        android:layout_marginTop="8dp"/>
-
-    <TextView
-        android:id="@+id/tourDetailPrice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:layout_marginTop="16dp"/>
-
-    <TextView
-        android:id="@+id/tourLongDescription"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="16sp"
-        android:layout_marginTop="16dp"/>
-    <!-- MapView below the ViewPager2 -->
-    <com.google.android.gms.maps.MapView
-        android:id="@+id/mapView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="25dp" />
-</LinearLayout>
+        android:orientation="vertical">
+
+        <!-- Tour Detail Image -->
+        <ImageView
+            android:id="@+id/tourDetailImage"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:scaleType="centerCrop"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Tour Name -->
+        <TextView
+            android:id="@+id/tourDetailName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <!-- Tour Description -->
+        <TextView
+            android:id="@+id/tourDetailDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_marginTop="8dp" />
+
+        <!-- Tour Price -->
+        <TextView
+            android:id="@+id/tourDetailPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="32sp"
+            android:layout_marginTop="16dp" />
+
+
+        <!-- Inclusions Section
+        <TextView
+            android:id="@+id/inclusionsHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Inclusions"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp" />
+
+        <TextView
+            android:id="@+id/tourInclusions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp" />
+
+         Departure Details Section -->
+        <TextView
+            android:id="@+id/departureDetailsHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Departure Details"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp" />
+
+        <TextView
+            android:id="@+id/tourDepartureDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="Flight, Hotel and Cruise Pickup is included This includes all locations from Vancouver, Richmond, North Vancouver and Burnaby. Our Tour guide will contact you before the 24 hours of departure to confirm pick up location and time for day trips. In the case of multi-day trips, we will contact you 48 hours before departure."
+            android:layout_marginTop="8dp"
+            tools:ignore="HardcodedText" />
+
+        <!-- Itinerary Section
+        <TextView
+            android:id="@+id/itineraryHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Itinerary"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp" />
+
+        <TextView
+            android:id="@+id/tourItinerary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp" />
+
+         Testimonials Section
+        <TextView
+            android:id="@+id/testimonialsHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Testimonials"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp" />
+
+        <TextView
+            android:id="@+id/tourTestimonials"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp" />
+          -->
+        <!-- Map View -->
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/mapView"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginTop="24dp" />
+    </LinearLayout>
+</ScrollView>

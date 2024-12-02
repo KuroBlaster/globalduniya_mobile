@@ -1,25 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:padding="16dp">
-
-    <TextView
-        android:id="@+id/titleTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Best Private Luxury tours In BC"
-        android:textSize="24sp"
-        android:layout_gravity="center"/>
-
-    <!-- Carousel (ViewPager2) -->
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/tourCarousel"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="400dp"
-        android:layout_marginTop="16dp"/>
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Toolbar Section -->
 
 
+        <!-- Hero Section -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
 
-</LinearLayout>
+            <!-- Logo -->
+
+            <!-- Hamburger Menu -->
+
+            <ImageView
+                android:id="@+id/logoImageView"
+                android:layout_width="102dp"
+                android:layout_height="70dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="2dp"
+                android:contentDescription="Logo"
+                android:src="@drawable/globalduniya_logo" />
+
+            <ImageButton
+                android:id="@+id/hamburgerButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="15dp"
+                android:background="@null"
+                android:contentDescription="Menu Button"
+                android:src="@drawable/hamburger_svg" />
+        </RelativeLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="16dp">
+
+            <!-- Hero Image -->
+            <ImageView
+                android:id="@+id/heroImageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="Hero Image"
+                android:scaleType="centerCrop"
+                android:src="@drawable/vancouver_hero" />
+
+            <!-- Text Overlay -->
+            <TextView
+                android:id="@+id/heroText"
+                android:layout_width="326dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:text="Best Private Luxury Tours in BC"
+                android:textColor="#FFFFFF"
+                android:textSize="36sp" />
+        </FrameLayout>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/textCarousel"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="25dp" />
+
+        <TextView
+            android:id="@+id/hotDeals"
+            android:layout_width="326dp"
+            android:layout_height="wrap_content"
+            android:text="Hottest Deals of the month"
+            android:textSize="30sp"
+            android:layout_marginTop="50dp"
+            android:textFontWeight="8"/>
+
+        <!-- Carousel (ViewPager2) -->
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/tourCarousel"
+            android:layout_width="match_parent"
+            android:layout_height="450dp" />
+
+    </LinearLayout>
+</ScrollView>
